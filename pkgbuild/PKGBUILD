@@ -1,0 +1,13 @@
+# Maintainer: Bruno Goncalves <bigbruno@gmail.com>
+
+pkgname=biglinux-metapackage
+pkgver=$(date +%y.%m.%d)
+pkgrel=$(date +%H%M)
+arch=('any')
+license=('GPL')
+depends=('bigbashview' 'biglinux-plasmoids' 'packagekit-qt5')
+pkgdesc="Meta package to simplify BigLinux updates"
+
+package() {
+  true
+}
