@@ -5,7 +5,7 @@ pkgver=$(date +%y.%m.%d)
 pkgrel=$(date +%H%M)
 arch=('any')
 license=('GPL')
-depends=('bigbashview' 'biglinux-plasmoids' 'packagekit-qt5')
+depends=('bigbashview' 'biglinux-plasmoids' 'packagekit-qt5' 'xorg-fonts-100dpi')
 pkgdesc="Meta package to simplify BigLinux updates"
 
 package() {
