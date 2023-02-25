@@ -9,10 +9,6 @@ depends=('bigbashview' 'xorg-fonts-100dpi' 'hplip' 'big-snow' 'patch')
 conflicts=('kernel-alive')
 pkgdesc="Meta package to simplify BigLinux updates"
 
-if [ -n "$(echo $DESKTOP_SESSION | grep plasma)" ];then
-  depends+=('biglinux-plasmoids' 'packagekit-qt5')
-fi
-
 package() {
   true
 }
