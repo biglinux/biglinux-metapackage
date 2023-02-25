@@ -5,9 +5,13 @@ pkgver=$(date +%y.%m.%d)
 pkgrel=$(date +%H%M)
 arch=('any')
 license=('GPL')
-depends=('bigbashview' 'biglinux-plasmoids' 'packagekit-qt5' 'xorg-fonts-100dpi' 'hplip' 'big-snow' 'patch')
+depends=('bigbashview' 'xorg-fonts-100dpi' 'hplip' 'big-snow' 'patch')
 conflicts=('kernel-alive')
 pkgdesc="Meta package to simplify BigLinux updates"
+
+if [ -n "$(echo $DESKTOP_SESSION | grep plasma)" ];then
+  depends+=('biglinux-plasmoids' 'packagekit-qt5')
+fi
 
 package() {
   true
