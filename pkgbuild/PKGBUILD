@@ -6,8 +6,9 @@ pkgrel=$(date +%H%M)
 arch=('any')
 license=('GPL')
 depends=('bigbashview' 'xorg-fonts-100dpi' 'hplip' 'big-snow' 'patch')
-conflicts=('kernel-alive')
+# conflicts=('')
 pkgdesc="Meta package to simplify BigLinux updates"
+replaces=('kernel-alive')
 
 package() {
   true
